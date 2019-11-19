@@ -37,16 +37,14 @@ class EmployeeManagementApplicationTests {
 
 		employeeManagementRepository.save(sree);
 		employeeManagementRepository.save(uday);
+		Project javaProject = new Project("educationApp",10);
+		projectRepository.save(javaProject);
 
 		javatechnology.addEmployee(sree);
 		pythontechnology.addEmployee(uday);
-		Project javaProject = new Project("educationApp",10);
-         javaProject.addEmployee(sree);
-         javaProject.addEmployee(ved);
-		projectRepository.save(javaProject);
-         sree.addProject(javaProject);
-         ved.addProject(javaProject);
 
+
+		projectRepository.save(javaProject);
 
 
 	}
